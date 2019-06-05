@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>The Grapes of XPath</title>
+
+  <!-- Bootstrap Core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom Fonts -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+  <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+
+  <!-- D3 -->
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="http://d3js.org/queue.v1.min.js"></script>
+    <script src="http://d3js.org/topojson.v1.min.js"></script>
+
+  <!-- Custom CSS -->
+  <link href="css/stylish-portfolio.css" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400italic,600italic,700italic,200,300,400,600,700,900">
+
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <a class="menu-toggle rounded" href="#">
+    <i class="fas fa-bars"></i>
+  </a>
+  <nav id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+      <li class="sidebar-brand">
+        <a class="js-scroll-trigger" href="index.html">Explore our Site</a>
+      </li>
+      <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="index.html/#db_search">Search Our Database</a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="#wine_search">Find a Wine</a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="#about">About Our Project</a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="#geo_viz">Geographic Visualizations</a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="#charts">Visualizations</a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="#contact">Contact</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Maps -->
+  <section class="callout" id="pointsgeo_viz">
+    <div class="container text-center">
+      <h2 class="mx-auto mb-5">Maps</h2>
+      <button onclick="pointsClicked()">Show points map</button>
+      <button onclick="priceClicked()">Show price map</button><br><br>
+        <h1>US State's Wine Ratings</h1>
+        <div id="points"></div>
+          <p>Wines are rated out of a 100 point scale.</p>
+        <h1>US State's Average Wine Prices</h1>
+        <div id="price"></div>
+    </div>
+  </section>
+
+
+  <!-- Visualizations -->
+  <section class="content-section bg-primary text-white" id="charts">
+    <div class="container text-center">
+      <h2 class="mb-4">Visualizations</h2>
+      <h3>Click 'full screen' to enlarge</h3><br>
+    <!-- first row -->
+      <div class="row">
+          <div class="col-xs-9 col-sm-9 col-md-6">
+            <div class='tableauPlaceholder' id='viz1553054491434' style='position: relative'>
+                <noscript>
+                    <a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;co&#47;count_states&#47;Sheet6&#47;1_rss.png' style='border: none' /></a>
+                </noscript>
+                <object class='tableauViz'  style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+                    <param name='embed_code_version' value='3' /> <param name='site_root' value='' />
+                    <param name='name' value='count_states&#47;Sheet6' />
+                    <param name='tabs' value='no' /><param name='toolbar' value='yes' />
+                    <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;co&#47;count_states&#47;Sheet6&#47;1.png' /> 
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                </object>
+            </div>       
+        </div>   
+      <script type='text/javascript'>                    
+      var divElement = document.getElementById('viz1553054491434');                   
+      var vizElement = divElement.getElementsByTagName('object')[0];                    
+      vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    
+      var scriptElement = document.createElement('script');                    
+      scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+      vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+      </script>
+              <div class="col-xs-9 col-sm-9 col-md-6">
+                    <div class='tableauPlaceholder' id='viz1553054711601' style='position: relative'>
+                        <noscript>
+                            <a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;av&#47;avg_states&#47;Sheet4&#47;1_rss.png' style='border: none' /></a>
+                        </noscript>
+                        <object class='tableauViz'  style='display:none;'>
+                            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+                            <param name='embed_code_version' value='3' /> 
+                            <param name='site_root' value='' />
+                            <param name='name' value='avg_states&#47;Sheet4' />
+                            <param name='tabs' value='no' />
+                            <param name='toolbar' value='yes' />
+                            <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;av&#47;avg_states&#47;Sheet4&#47;1.png' /> 
+                            <param name='animate_transition' value='yes' />
+                            <param name='display_static_image' value='yes' />
+                            <param name='display_spinner' value='yes' />
+                            <param name='display_overlay' value='yes' />
+                            <param name='display_count' value='yes' />
+                            <param name='filter' value='publish=yes' />
+                        </object>
+                    </div>                
+                    <script type='text/javascript'>                    
+                        var divElement = document.getElementById('viz1553054711601');                    
+                        var vizElement = divElement.getElementsByTagName('object')[0];                    
+                        vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    
+                        var scriptElement = document.createElement('script');                    
+                        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+                        vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+                    </script>
+                </div> 
+    </div><br>
+    <!-- second row -->
+    <div class="row">
+            <div class="col-xs-9 col-sm-9 col-md-6">
+                    <div class='tableauPlaceholder' id='viz1553054802153' style='position: relative'>
+                        <noscript>
+                            <a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;nu&#47;num_states&#47;Sheet5&#47;1_rss.png' style='border: none' /></a>
+                        </noscript>
+                        <object class='tableauViz'  style='display:none;'>
+                            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+                            <param name='embed_code_version' value='3' /> 
+                            <param name='site_root' value='' />
+                            <param name='name' value='num_states&#47;Sheet5' />
+                            <param name='tabs' value='no' />
+                            <param name='toolbar' value='yes' />
+                            <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;nu&#47;num_states&#47;Sheet5&#47;1.png' /> 
+                            <param name='animate_transition' value='yes' />
+                            <param name='display_static_image' value='yes' />
+                            <param name='display_spinner' value='yes' />
+                            <param name='display_overlay' value='yes' />
+                            <param name='display_count' value='yes' />
+                        </object>
+                    </div>                
+                    <script type='text/javascript'>                    
+                    var divElement = document.getElementById('viz1553054802153');                    
+                    var vizElement = divElement.getElementsByTagName('object')[0];                    
+                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    
+                    var scriptElement = document.createElement('script');                    
+                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+                    </script>
+                </div>
+                <div class="col-xs-9 col-sm-9 col-md-6">
+                    <div class='tableauPlaceholder' id='viz1553211724997' style='position: relative'>
+                      <noscript>
+                        <a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Mo&#47;MostPopularWines&#47;Sheet3&#47;1_rss.png' style='border: none' /></a>
+                      </noscript>
+                      <object class='tableauViz'  style='display:none;'>
+                        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+                        <param name='embed_code_version' value='3' /> <param name='site_root' value='' />
+                        <param name='name' value='MostPopularWines&#47;Sheet3' />
+                        <param name='tabs' value='no' />
+                        <param name='toolbar' value='yes' />
+                        <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Mo&#47;MostPopularWines&#47;Sheet3&#47;1.png' /> 
+                        <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' />
+                        <param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' />
+                        <param name='display_count' value='yes' /><param name='filter' value='publish=yes' />
+                      </object>
+                    </div>                
+                    <script type='text/javascript'>                    
+                    var divElement = document.getElementById('viz1553211724997');                    
+                    var vizElement = divElement.getElementsByTagName('object')[0];                    
+                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    
+                    var scriptElement = document.createElement('script');                    
+                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+                    </script>
+                  </div> 
+      </div>
+  </section>
+
+  <!-- Contacts -->
+  <section id="contact">
+    <div class="container">
+        <h2 class="mb-4 text-white">Site Creators:</h2><br>
+
+      <div class="row">
+          <div class="col-md-6">
+            <div class="card" style="width: 20rem;" id="Hema">
+              <div class="card-header">Hema Bhoopathy</div>
+              <div class="card-body">
+                <p class="card-text">Github:</p>
+              </div>
+          </div>
+          </div>
+          <div class="col-md-6">
+              <div class="card" style="width: 20rem;" id="Alan">
+                  <div class="card-header">Alan Choate</div>
+                  <div class="card-body">
+                    <p class="card-text">Github:</p>
+                  </div>
+          </div>
+      </div>
+      </div><br><br>
+      <div class="row">
+          <div class="col-md-6">
+              <div class="card" style="width: 20rem;" id="Grecia">
+                  <div class="card-header">Grecia White</div>
+                  <div class="card-body">
+                    <p class="card-text">Github:</p>
+                  </div>
+                </div>
+          </div>
+        <div class="col-md-6">
+            <div class="card" style="width: 20rem;" id="Sarah">
+                <div class="card-header">Sarah Marquardt</div>
+                <div class="card-body">
+                  <p class="card-text">Github:</p>
+                </div>        
+              </div>
+      </div>
+      </div>
+    </div>
+
+
+
+  <!-- Footer -->
+  <footer class="footer text-center">
+    <div class="container">
+      <ul class="list-inline mb-5">
+        <li class="list-inline-item">
+          <a class="social-link rounded-circle text-white mr-3" href="#">
+            <i class="icon-social-facebook"></i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="social-link rounded-circle text-white mr-3" href="#">
+            <i class="icon-social-twitter"></i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="social-link rounded-circle text-white" href="#">
+            <i class="icon-social-github"></i>
+          </a>
+        </li>
+      </ul>
+      <p class="text-muted small mb-0">Copyright &copy; Your Website 2019</p>
+    </div>
+  </footer>
+  </section>
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- JavaScript -->
+  <script type="text/javascript" src="map/static/js/map_logic.js"></script>
+  <!-- <script type="text/javascript" src="map/static/js/pricemap_logic.js"></script> -->
+
+  <!-- Custom scripts for this template -->
+  <script src="js/stylish-portfolio.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script
+
+</body>
+
+</html>
