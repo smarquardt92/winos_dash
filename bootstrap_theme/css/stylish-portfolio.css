@@ -23,6 +23,10 @@ body {
   padding-bottom: 5rem;
 }
 
+.note {
+  font-size: 8pt;
+
+}
 .content-section-heading h2 {
   font-size: 3rem;
   /* padding-bottom: 1rem; */
@@ -34,8 +38,20 @@ body {
   padding-bottom: 3rem;
 }
 
+.mb-3 {
+  color: #f1e8e7;
+  font-size: 12pt;
+}
+
+.mb-4 {
+  color: #f1e8e7;
+  font-size: 32pt;
+  padding-bottom: .1rem;
+}
+
 .mb-5 {
   color: #d9948f !important;
+  font-size: 32pt;
 }
 
 h1,

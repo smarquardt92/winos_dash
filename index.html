@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>The Grapes of XPath</title>
+  <title>The United Wines of America</title>
 
   <!-- Bootstrap Core CSS -->
   <link href="bootstrap_theme/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -43,19 +43,13 @@
         <a class="js-scroll-trigger" href="">Explore our Site</a>
       </li>
       <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="#db_search">Search Our Database</a>
-      </li>
-      <li class="sidebar-nav-item">
-        <a class="js-scroll-trigger" href="#wine_search">Find a Wine</a>
-      </li>
-      <!-- <li class="sidebar-nav-item">
         <a class="js-scroll-trigger" href="#about">About Our Project</a>
-      </li> -->
-      <li class="sidebar-nav-item">
-        <a class="js-scroll-trigger" href="viz.html">Geographic Visualizations</a>
       </li>
       <li class="sidebar-nav-item">
-        <a class="js-scroll-trigger" href="viz.html">Visualizations</a>
+        <a class="js-scroll-trigger" href="#pointsgeo_viz">Geographic Visualizations</a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="#charts">Visualizations</a>
       </li>
       <li class="sidebar-nav-item">
         <a class="js-scroll-trigger" href="#contact">Contact</a>
@@ -66,52 +60,27 @@
   <!-- Header -->
   <header class="masthead d-flex">
     <div class="container text-center my-auto">
-      <!-- <h1 class="mb-1">Wine</h1> -->
-      <!-- <h3 class="mb-5"> -->
-        <!-- <em>Stuff About Wine</em> -->
-      <!-- </h3> -->
       <br><br><br><br><br><br><br>
-      <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Learn About our Wines</a>
+      <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Wines Across America</a>
     </div>
     <div class="overlay"></div>
   </header>
 
 <!-- About -->
 <section class="content-section bg-primary text-white text-center" id="about">
-    <div class="container text-center">
-      <div class="row">
         <h2 class="mb-5">About the Wines</h2><br>
-      </div>
-    <div class="row">
-        <p>Our database came from a webscrape of Wine Magazine's website. The database included <br>
-          hundreds of thousands of wines from around the world, but we chose to focus on US based wines.
+        <p>This database comes from a webscrape of Wine Magazine's website. The database included hundreds <br>
+          of thousands of wines from around the world, however this project focuses on US-based wines.
           <br>To see the raw data,  <a href="https://www.kaggle.com/zynicide/wine-reviews#winemag-data-130k-v2.csv">click here.</a><br>
-          To learn more about the making of this project, visit the <a href="https://github.com/smarquardt92/winos_dash">github repo.</a><br></p>
-        </div>
-        </div>
-        </section>
-
-
- <!-- Maps -->
- <section class="callout" id="pointsgeo_viz">
-  <div class="container text-center">
-    <h2 class="mx-auto mb-5">Maps</h2>
-    <button onclick="pointsClicked()">Show points map</button>
-    <button onclick="priceClicked()">Show price map</button><br><br>
-      <h1>US State's Wine Ratings</h1>
-      <div id="points"></div>
-        <p>Wines are rated out of a 100 point scale.</p>
-      <h1>US State's Average Wine Prices</h1>
-      <div id="price"></div>
-  </div>
+          To learn more about the making of this project, visit the <a href="https://github.com/smarquardt92/winos_dash">github repo.</a><br>
+          Scroll down to see data visualizations.</p>
 </section>
-
 
 <!-- Visualizations -->
 <section class="content-section bg-primary text-white" id="charts">
   <div class="container text-center">
     <h2 class="mb-4">Visualizations</h2>
-    <h3>Click 'full screen' to enlarge</h3><br>
+    <h3 class="mb-3">Click 'full screen' to enlarge</h3><br>
   <!-- first row -->
     <div class="row">
         <div class="col-xs-9 col-sm-9 col-md-6">
@@ -232,6 +201,21 @@
     </div>
 </section>
 
+ <!-- Maps -->
+ <section class="callout" id="pointsgeo_viz">
+  <div class="container text-center">
+    <h2 class="mx-auto mb-5">Maps</h2>
+    <p class="note">If viewing in Chrome, load unsafe scripts to view these maps. (Locate the shield icon with the red box towards the top of your screen)</p>
+    <button onclick="pointsClicked()">Show points map</button>
+    <button onclick="priceClicked()">Show price map</button><br><br>
+      <h1>US State's Wine Ratings</h1>
+      <div id="points"></div>
+        <p>Wines are rated out of a 100 point scale.</p>
+      <h1>US State's Average Wine Prices</h1>
+      <div id="price"></div>
+  </div>
+</section>
+
   <!-- Database Search -->
   <!-- <section class="content-section bg-primary text-white text-center" id="db_search">
     <div class="container">
@@ -339,40 +323,17 @@
   <!-- Contacts -->
   <section id="contact">
     <div class="container">
-        <h2 class="mb-4 text-white" >Site Creators:</h2><br>
+        <h2 class="mb-4 text-white" >Site Creator:</h2><br>
 
       <div class="row">
-          <div class="col-md-6">
-            <div class="card" style="width: 18rem;" id="Hema">
-              <div class="card-header">Hema Bhoopathy</div>
-              <div class="card-body">
-                <p class="card-text">Github:</p>
-              </div>
-          </div>
-          </div>
-          <div class="col-md-6">
-              <div class="card" style="width: 18rem;" id="Alan">
-                  <div class="card-header">Alan Choate</div>
-                  <div class="card-body">
-                    <p class="card-text">Github:</p>
-                  </div>
-          </div>
-      </div>
-      </div>
-      <div class="row">
-          <div class="col-md-6">
-              <div class="card" style="width: 18rem;" id="Grecia">
-                  <div class="card-header">Grecia White</div>
-                  <div class="card-body">
-                    <p class="card-text">Github:</p>
-                  </div>
-                </div>
-          </div>
         <div class="col-md-6">
             <div class="card" style="width: 18rem;" id="Sarah">
                 <div class="card-header">Sarah Marquardt</div>
                 <div class="card-body">
-                  <p class="card-text">Github: smarquardt92 </p>
+                  <p class="card-text text-center"><a href='https://github.com/smarquardt92/'>Github</a> </p>
+                  <p class="card-text text-center"><a href='https://www.linkedin.com/in/sarah-marquardt/'>LinkedIn</a> </p>
+                  <p class="card-text text-center"><a href='https://smarquardt92.github.io/'>Portfolio</a> </p>
+
                 </div>        
               </div>
       </div>
@@ -384,24 +345,7 @@
   <!-- Footer -->
   <footer class="footer text-center">
     <div class="container">
-      <ul class="list-inline mb-5">
-        <li class="list-inline-item">
-          <a class="social-link rounded-circle text-white mr-3" href="#">
-            <i class="icon-social-facebook"></i>
-          </a>
-        </li>
-        <li class="list-inline-item">
-          <a class="social-link rounded-circle text-white mr-3" href="#">
-            <i class="icon-social-twitter"></i>
-          </a>
-        </li>
-        <li class="list-inline-item">
-          <a class="social-link rounded-circle text-white" href="#">
-            <i class="icon-social-github"></i>
-          </a>
-        </li>
-      </ul>
-      <p class="text-muted small mb-0">Copyright &copy; Your Website 2019</p>
+      <p class="text-muted small mb-0">Last updated: June 2019</p>
     </div>
   </footer>
   </section>
