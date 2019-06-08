@@ -1,32 +1,35 @@
-# wine-review-project
+The purpose of this project is to analyze the correlations, if any, between ratings and various characteristics (price, variety, state) of US-made wines.
 
-## Data sources:
-2 CSV files from:
-https://www.kaggle.com/zynicide/wine-reviews#winemag-data-130k-v2.csv
-originally scraped from winemag.com
+# The ETL Process
+Code is located in file 'cleaning data columns.ipynb'
+## Extracting Data
+For this ETL portion of this project, the focus is on wine reviews and ratings. The data was extracted, transformed and loaded using Jupyter Notebook libraries and MySQL. The data was sourced in the form of 2 CSV files from https://www.kaggle.com/zynicide/wine-reviews#winemag-data-130k-v2.csv, originally scraped from winemag.com. 
 
-## Transformations steps
-1.    Load csv’s and JSON into pandas databases
-2.    Narrow down columns to focus on:
--    Country (US/north America)
--    province
--    Point (ratings)
--    Price
--    Variety (type of wine)
--    Description
-3.    Clean data
-a.    Drop duplicates and unknowns
-b.    Re-name columns as necessary
-c.    Re-categorize as necessary
+## Transforming Data
+Both CSV files were uploaded to Jupyter Notebook and manipulated using the Pandas library. The files were converted into dataframes, cleaned, and narrowed down in the following ways for analysis: 
 
-## Load Point
-- Load databases into SQL as table
+- Columns selected:
+  description, 
+  points, 
+  country, 
+  province, 
+  variety, 
+  price. 
 
-## Data endpoints:
--    Where the highest rated wines come from
--    Where the highest priced wines come from
--    Correlation between price and rating
--    What key words are used to describe wines the most
--    What key words are associated with the highest rated wines
--    Average overall rating of wine by state/region
--    Average price of wine by state/region
+- Only US wines were kept for analysis. 
+- All wines that had a null value for price were dropped.
+
+After cleaning, the dataframe was converted back into a final CSV.
+
+## Loading Data
+MySQL was used to create a database with a single table reflecting the information in the final csv file. This was done using the “to_sql”, with an ID column as the primary key. 
+
+# The Visualization Process
+
+
+# Technology Used:
+- Python
+- Pandas
+- SQLAlchemy
+- PyMySQL
+- MySQL
