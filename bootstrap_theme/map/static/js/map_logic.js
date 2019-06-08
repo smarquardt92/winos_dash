@@ -15,7 +15,7 @@ tooltip = d3.select("body").append("div")
 	.style("opacity", 0);
 
 queue()
-	.defer(d3.csv, "map/map_resources/points_average.csv")
+	.defer(d3.csv, "bootstrap_theme/map/map_resources/points_average.csv")
     .defer(d3.json, "https://raw.githubusercontent.com/PublicaMundi/MappingAPI/master/data/geojson/us-states.json")
     .await(readyPoints);
     
@@ -128,7 +128,7 @@ tooltip = d3.select("body").append("div")
 	.style("opacity", 0);
     
 queue()
-    .defer(d3.csv, "map/map_resources/price_average.csv")
+    .defer(d3.csv, "bootstrap_theme/map/map_resources/price_average.csv")
     .defer(d3.json, "https://raw.githubusercontent.com/PublicaMundi/MappingAPI/master/data/geojson/us-states.json")
 	.await(readyPrice);
 
