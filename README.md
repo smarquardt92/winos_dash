@@ -26,6 +26,7 @@ MySQL was used to create a database with a single table reflecting the informati
 
 # The Visualization Process
 
+A combination of D3.js and Tableau were used to create various visualizations of the data.
 
 # Technology Used:
 - Python
@@ -33,3 +34,8 @@ MySQL was used to create a database with a single table reflecting the informati
 - SQLAlchemy
 - PyMySQL
 - MySQL
+- JavaScript
+- D3.js
+- Tableau
+- HTML/CSS
+- Jupter Notebook
